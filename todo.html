@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Todo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2 id="greeting"></h2>
+        <h1>Create your Todo List</h1>
+       
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="What needs to be done?" autocomplete="off">
+            <button class="add-btn" onclick="addToDo()">Add Task</button>
+        </div>
+        <ul id="todoList" class="todo-list">
+            <li class="empty-state">Start adding your tasks!</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
