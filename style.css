@@ -467,6 +467,10 @@ input[type="text"]:focus {
         margin: 20px;
     }
 
+    .intro-wrapper h3 {
+        font-size: 40px;
+    }
+
     .input-group {
         flex-direction: column;
     }
