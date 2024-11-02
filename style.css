@@ -14,7 +14,7 @@ body {
 .heading-wrapper {
     width: 50%;
     margin: 30px auto;
-    padding: 40px 30px;
+    padding: 20px 30px;
     border-radius: 20px 60px 10px 100px;
     background-color: whitesmoke;
     text-align: center;
@@ -39,6 +39,24 @@ body {
     font-size: 50px;
     color: #f2f2f2;
     animation: float 6s ease-in-out infinite;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin: 30px;
+    animation: float 6s ease-in-out infinite;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 800;
+    color: #f2f2f2;
+}
+
+.logo svg {
+    margin-top: 13px;
 }
 
 @keyframes float {
@@ -286,7 +304,8 @@ input[type="text"]:focus {
 }
 
 .todo-item.completed {
-    background: #f8faff;
+    /* background: #f8faff; */
+    background-color: #73e2967a;
     transform: scale(0.98);
 }
 
@@ -405,6 +424,10 @@ input[type="text"]:focus {
         width: 90%;
         grid-template-columns: 1fr;
     }
+
+    .container {
+        width: 90%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -431,5 +454,20 @@ input[type="text"]:focus {
     .features-list {
         width: 100%;
         grid-template-columns: 1fr;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .logo {
+        margin: 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
     }
 }
