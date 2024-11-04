@@ -11,23 +11,6 @@ body {
     padding: 20px;
 }
 
-.heading-wrapper {
-    width: 50%;
-    margin: 30px auto;
-    padding: 20px 30px;
-    border-radius: 20px 60px 10px 100px;
-    background-color: whitesmoke;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-.heading-wrapper h1{
-    font-weight: bold;
-    color: #0e0e0e;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .intro-wrapper {
     margin: 70px auto;
