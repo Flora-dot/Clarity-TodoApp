@@ -26,6 +26,15 @@ function setUserName() {
   }
 }
 
+// load todo from local storage
+function loadFromLocalStorage() {
+    const savedTodos = localStorage.getItem("todoList");
+    if (savedTodos) {
+      todoList = JSON.parse(savedTodos);
+      renderTodoList();
+    }
+  }
+
 // store items in local storage
 function updateLocalStorage() {
   localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -71,9 +80,13 @@ function displayTodo(todoItem) {
   li.className = "todo-item";
   li.dataset.id = todoItem.id; // Store ID in dataset for easy reference
 
+   // Set background color based on completed status
+   li.style.backgroundColor = todoItem.completed ? "#96e9c87e" : "transparent";
+
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
   checkbox.checked = todoItem.completed;
+  checkbox.name = 'todo-checkbox'
   checkbox.addEventListener("change", function () {
     checkTodo(todoItem.id, this.checked);
   });
@@ -104,6 +117,8 @@ function renderTodoList() {
     todoListElement.appendChild(emptyState);
   } else {
     todoList.forEach((item) => displayTodo(item));
+
+    // todoItem.style.backgroundColor = todo.completed ? '#90EE90' : 'transparent';
   }
 }
 
@@ -155,3 +170,7 @@ window.onload = function () {
     renderTodoList();
   }
 };
+
+document.addEventListener('DOMContentLoaded', () => {
+    loadFromLocalStorage();
+  });

@@ -457,4 +457,8 @@ input[type="text"]:focus {
     .input-group {
         flex-direction: column;
     }
+
+    .delete-btn {
+        opacity: 1;
+    }
 }
